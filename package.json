@@ -21,7 +21,7 @@
     "postbuild": "npm run package-extension -- --rev-version",
     "package-extension": "tfx extension create --manifest-globs azure-devops-extension.json src/Samples/**/*.json",
     "publish-extension": "tfx extension publish --manifest-globs azure-devops-extension.json src/Samples/**/*.json",
-    "test": "env TEST_REPORT_FILENAME=test-results.xml jest --verbose"
+    "test": "set TEST_REPORT_FILENAME=test-results.xml && jest --verbose"
   },
   "dependencies": {
     "azure-devops-extension-api": "~1.157.0",
@@ -45,7 +45,7 @@
     "rimraf": "~2.6.2",
     "sass-loader": "~10.0.5",
     "style-loader": "~0.23.1",
-    "tfx-cli": "^0.6.3",
+    "tfx-cli": "^0.10.0",
     "ts-jest": "^26.1.1",
     "ts-loader": "~5.2.2",
     "typescript": "^3.9.6",
